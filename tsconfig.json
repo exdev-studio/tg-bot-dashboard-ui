@@ -19,7 +19,36 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/custom-typings/*": [
+        "src/custom_typings/*"
+      ],
+      "@app/const/*": [
+        "src/app/const/*"
+      ],
+      "@app/module/*": [
+        "src/app/module/*"
+      ],
+      "@app/environment": [
+        "src/environments/environment.ts"
+      ],
+      "@app/service/*": [
+        "src/app/service/*"
+      ],
+      "@app/util/*": [
+        "src/app/util/*"
+      ],
+      "@app/token/*": [
+        "src/app/token/*"
+      ],
+      "@app/interceptor/*": [
+        "src/app/interceptor/*"
+      ],
+      "@app/resolver/*": [
+        "src/app/resolver/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
