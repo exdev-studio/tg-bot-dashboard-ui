@@ -27,6 +27,9 @@
       "@app/const/*": [
         "src/app/const/*"
       ],
+      "@app/component/*": [
+        "src/app/component/*"
+      ],
       "@app/module/*": [
         "src/app/module/*"
       ],

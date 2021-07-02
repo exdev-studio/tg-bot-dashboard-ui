@@ -1,0 +1,46 @@
+@import "colors";
+@import "sizes";
+
+.app {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
+
+  .logo-icon {
+    $size: 40px;
+    fill: none;
+    stroke: $color-light;
+    width: $size;
+    height: $size;
+    margin-right: $h-margin-s2;
+  }
+
+  .header,
+  .footer {
+    background-color: $color-tertiary;
+    color: $color-light;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .header,
+  .main,
+  .footer {
+    padding: 0 $h-margin;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .copyright-link {
+    margin-left: $h-margin-s1;
+  }
+
+  .svg-sprite {
+    display: none;
+  }
+}
