@@ -23,6 +23,10 @@ export class AppComponent {
     this.translateService.use(Lang.EN);
   }
 
+  isEnglishCurrentLang(): boolean {
+    return this.translateService.currentLang === Lang.EN;
+  }
+
   onEnglishLanguageClick(): void {
     this.translateService.use(Lang.EN);
   }

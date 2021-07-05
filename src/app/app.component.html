@@ -20,12 +20,14 @@
 
     <div class="languages">
       <button class="btn btn-primary language"
+              [disabled]="isEnglishCurrentLang()"
               (click)="onEnglishLanguageClick()">
         <img class="lang-icon" [alt]="'footer.language.english' | translate" [src]="englishLangIconUrl">
         {{ "footer.language.english" | translate }}
       </button>
 
       <button class="btn btn-primary language"
+              [disabled]="!isEnglishCurrentLang()"
               (click)="onRussianLanguageClick()">
         <img class="lang-icon" [alt]="'footer.language.russian' | translate" [src]="russianLangIconUrl">
         {{ "footer.language.russian" | translate }}
