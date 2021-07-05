@@ -1,2 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#eefbfb"
-     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codesandbox"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline><polyline points="7.5 19.79 7.5 14.6 3 12"></polyline><polyline points="21 12 16.5 14.6 16.5 19.79"></polyline><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="feather feather-codesandbox" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#eefbfb" fill="none">
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_7" height="29.25" width="29.5" y="-2.71875" x="-2.4375" stroke="#000" fill="#203647"/>
+  <path id="svg_1" d="m21,16l0,-8a2,2 0 0 0 -1,-1.73l-7,-4a2,2 0 0 0 -2,0l-7,4a2,2 0 0 0 -1,1.73l0,8a2,2 0 0 0 1,1.73l7,4a2,2 0 0 0 2,0l7,-4a2,2 0 0 0 1,-1.73z"/>
+  <polyline id="svg_2" points="7.5 4.21 12 6.81 16.5 4.21"/>
+  <polyline id="svg_3" points="7.5 19.79 7.5 14.6 3 12"/>
+  <polyline id="svg_4" points="21 12 16.5 14.6 16.5 19.79"/>
+  <polyline id="svg_5" points="3.27 6.96 12 12.01 20.73 6.96"/>
+  <line id="svg_6" y2="12" x2="12" y1="22.08" x1="12"/>
+ </g>
+</svg>
