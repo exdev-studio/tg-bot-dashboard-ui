@@ -1,0 +1,14 @@
+{
+  "header": {
+    "title": "TG Bot Dashboard"
+  },
+  "main": {
+    "main": "майн"
+  },
+  "footer": {
+    "language": {
+      "russian": "Русский",
+      "english": "English"
+    }
+  }
+}

@@ -5,14 +5,31 @@
   <header class="header">
     <app-svg-icon class="logo-icon" [icon]="logoIcon"
     ></app-svg-icon>
-    <h1 class="name">TG Bot Dashboard</h1>
+    <h1 class="name">{{ "header.title" | translate }}</h1>
   </header>
 
   <main class="main">
-    main
+    {{ "main.main" | translate }}
   </main>
 
   <footer class="footer">
-    &copy; 2021 <a href="https://github.com/exdev-studio/" target="_blank" class="link copyright-link">exdev-studio</a>
+    <span class="copyright">
+      &copy; 2021 <a href="https://github.com/exdev-studio/" target="_blank"
+                     class="link copyright-link">exdev-studio</a>
+    </span>
+
+    <div class="languages">
+      <button class="btn btn-primary language"
+              (click)="onEnglishLanguageClick()">
+        <img class="lang-icon" [alt]="'footer.language.english' | translate" [src]="englishLangIconUrl">
+        {{ "footer.language.english" | translate }}
+      </button>
+
+      <button class="btn btn-primary language"
+              (click)="onRussianLanguageClick()">
+        <img class="lang-icon" [alt]="'footer.language.russian' | translate" [src]="russianLangIconUrl">
+        {{ "footer.language.russian" | translate }}
+      </button>
+    </div>
   </footer>
 </div>

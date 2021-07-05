@@ -32,6 +32,14 @@
     padding: 0 $h-margin;
   }
 
+  .main {
+    padding: $h-margin;
+  }
+
+  .footer {
+    justify-content: space-between;
+  }
+
   .name {
     font-weight: bold;
   }
@@ -42,5 +50,25 @@
 
   .svg-sprite {
     display: none;
+  }
+
+  .languages {
+    display: flex;
+  }
+
+  .language {
+    align-items: center;
+    display: flex;
+  }
+
+  .language:not(:last-child) {
+    margin-right: $h-margin-s1;
+  }
+
+  .lang-icon {
+    $size: 20px;
+    width: $size;
+    height: $size;
+    margin-right: $h-margin-s1;
   }
 }

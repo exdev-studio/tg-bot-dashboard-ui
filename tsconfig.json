@@ -50,6 +50,12 @@
       ],
       "@app/resolver/*": [
         "src/app/resolver/*"
+      ],
+      "@app/entity/*": [
+        "src/app/entity/*"
+      ],
+      "@app/enum/*": [
+        "src/app/enum/*"
       ]
     }
   },
