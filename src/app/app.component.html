@@ -20,6 +20,7 @@
 
     <div class="languages">
       <button class="btn btn-primary language"
+              [title]="'footer.language.english' | translate"
               [disabled]="isEnglishCurrentLang()"
               (click)="onEnglishLanguageClick()">
         <img class="lang-icon" [alt]="'footer.language.english' | translate" [src]="englishLangIconUrl">
@@ -27,6 +28,7 @@
       </button>
 
       <button class="btn btn-primary language"
+              [title]="'footer.language.russian' | translate"
               [disabled]="!isEnglishCurrentLang()"
               (click)="onRussianLanguageClick()">
         <img class="lang-icon" [alt]="'footer.language.russian' | translate" [src]="russianLangIconUrl">
