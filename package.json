@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
-    "build:prod": "ng build --prod",
+    "build": "ng build --prod",
     "test": "ng test",
     "generate-svg-sprite": "svgstore INPUT src/assets/icons/*.svg -o src/app/component/svg-sprite/svg-sprite.component.html",
     "postinstall": "npm run generate-svg-sprite"
