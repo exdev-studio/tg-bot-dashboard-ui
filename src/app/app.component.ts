@@ -7,6 +7,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { Observable } from 'rxjs';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { tap } from 'rxjs/operators';
+import { environment } from '@app/environment';
 
 @Component({
   selector: 'app-root',
@@ -48,6 +49,8 @@ export class AppComponent {
   }
 
   onLogoutButtonClick(): void {
-    this.authService.logout();
+    this.authService.logout({
+      returnTo: environment.auth.redirectUri,
+    });
   }
 }
