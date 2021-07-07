@@ -1,15 +1,35 @@
+<ngx-spinner color="#007cc7" bdColor="#11232e" [disableAnimation]="true"
+></ngx-spinner>
+
 <div class="app">
   <app-svg-sprite class="svg-sprite"
   ></app-svg-sprite>
 
   <header class="header">
-    <app-svg-icon class="logo-icon" [icon]="logoIcon"
-    ></app-svg-icon>
-    <h1 class="name">{{ "header.title" | translate }}</h1>
+    <div class="logo">
+      <app-svg-icon class="logo-icon" [icon]="logoIcon"
+      ></app-svg-icon>
+      <h1 class="name">{{ "header.title" | translate }}</h1>
+    </div>
+
+    <div class="logged-in">
+      <ngx-avatar [title]="(user$ | async)?.email"
+                  [src]="(user$ | async)?.picture"
+      ></ngx-avatar>
+
+      <button *ngIf="isAuthenticated$ | async" class="btn btn-primary logout"
+              (click)="onLogoutButtonClick()">
+        {{ "header.logout" | translate }}
+      </button>
+    </div>
   </header>
 
   <main class="main">
-    {{ "main.main" | translate }}
+    <ng-container *ngIf="isAuthenticated$ | async">
+      <p>
+        {{ "main.main" | translate }}
+      </p>
+    </ng-container>
   </main>
 
   <footer class="footer">

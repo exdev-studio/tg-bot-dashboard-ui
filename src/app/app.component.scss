@@ -8,6 +8,16 @@
   display: grid;
   grid-template-rows: 60px 1fr 60px;
 
+  .logo,
+  .logged-in   {
+    display: flex;
+    align-items: center;
+  }
+
+  .logout {
+    margin-left: $h-margin-s1;
+  }
+
   .logo-icon {
     $size: 40px;
     fill: none;
@@ -40,6 +50,10 @@
     justify-content: space-between;
   }
 
+  .header {
+    justify-content: space-between;
+  }
+
   .name {
     font-weight: bold;
   }
@@ -69,6 +83,6 @@
     $size: 20px;
     width: $size;
     height: $size;
-    margin-right: $h-margin-s1;
+    margin-right: $h-margin;
   }
 }

@@ -1,6 +1,7 @@
 {
   "header": {
-    "title": "TG Bot Dashboard"
+    "title": "TG Bot Dashboard",
+    "logout": "Выйти"
   },
   "main": {
     "main": "майн"

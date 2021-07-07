@@ -3,6 +3,10 @@ import { SvgIcon } from '@app/component/svg-icon/svg-icon.const';
 import { TranslateService } from '@ngx-translate/core';
 import { Lang } from '@app/enum/lang.enum';
 import { EN, RU } from '@app/const/lang-icon-url.const';
+import { AuthService } from '@auth0/auth0-angular';
+import { Observable } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +21,18 @@ export class AppComponent {
   readonly russianLangIconUrl: string = RU;
   readonly englishLangIconUrl: string = EN;
 
+  readonly user$ = this.authService.user$;
+  readonly isAuthenticated$: Observable<boolean> = this.authService.isAuthenticated$.pipe(
+    tap(() => this.spinnerService.hide()),
+  );
+
   constructor(
     private translateService: TranslateService,
+    private authService: AuthService,
+    private spinnerService: NgxSpinnerService,
   ) {
     this.translateService.use(Lang.EN);
+    this.spinnerService.show();
   }
 
   isEnglishCurrentLang(): boolean {
@@ -33,5 +45,9 @@ export class AppComponent {
 
   onRussianLanguageClick(): void {
     this.translateService.use(Lang.RU);
+  }
+
+  onLogoutButtonClick(): void {
+    this.authService.logout();
   }
 }

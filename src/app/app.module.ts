@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SvgSpriteModule } from '@app/component/svg-sprite/svg-sprite.module';
@@ -9,6 +8,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { AuthModule } from '@auth0/auth0-angular';
+import { AvatarModule } from 'ngx-avatar';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from '@app/environment';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +23,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SvgSpriteModule,
     SvgIconModule,
@@ -33,8 +37,14 @@ export function createTranslateLoader(http: HttpClient) {
         ],
       },
     }),
+    AuthModule.forRoot({
+      domain: environment.auth.domain,
+      clientId: environment.auth.clientId,
+    }),
     NgbModule,
     FormsModule,
+    AvatarModule,
+    NgxSpinnerModule,
   ],
   bootstrap: [
     AppComponent,
