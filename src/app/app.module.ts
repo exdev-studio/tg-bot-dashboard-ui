@@ -40,6 +40,7 @@ export function createTranslateLoader(http: HttpClient) {
     AuthModule.forRoot({
       domain: environment.auth.domain,
       clientId: environment.auth.clientId,
+      redirectUri: environment.auth.redirectUri,
     }),
     NgbModule,
     FormsModule,
